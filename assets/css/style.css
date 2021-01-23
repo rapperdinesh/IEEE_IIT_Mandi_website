@@ -405,7 +405,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero h2 {
   color: #fff;
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 2.5rem;;
   font-weight: 700;
 }
 
@@ -419,6 +419,7 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
+  font-size: 2rem;
 }
 
 #hero .carousel-inner .carousel-item {
@@ -514,7 +515,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #hero h2 {
-    font-size: 28px;
+    font-size: 35px;
   }
 }
 

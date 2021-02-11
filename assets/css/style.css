@@ -905,7 +905,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #8ed851;
+  color: #65ae28;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -923,6 +923,10 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+.section-title h3 {
+  color: #8ed851;
+}
+
 .team {
   background: #fff;
   padding: 60px 0;
@@ -931,8 +935,14 @@ section {
 .team .member {
   text-align: center;
   margin-bottom: 20px;
-  background: #343a40;
+  /* background: #343a40; */
   position: relative;
+}
+
+.team .member img {
+  height: 350px;
+  width: 30%;
+  width: revert;
 }
 
 .team .member .member-info {
@@ -951,6 +961,10 @@ section {
 .team .member .member-info-content {
   margin-top: -50px;
   transition: margin 0.2s;
+}
+
+.team .member:hover {
+  background: #343a40;
 }
 
 .team .member:hover .member-info {

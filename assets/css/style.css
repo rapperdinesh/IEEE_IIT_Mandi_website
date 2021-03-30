@@ -598,7 +598,7 @@ section {
 .about .image {
   background: url("../img/about.jpg") center center no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 300px;
 }
 
 @media (max-width: 991px) {
@@ -1481,6 +1481,7 @@ section {
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+ 
 }
 
 #footer .footer-top {

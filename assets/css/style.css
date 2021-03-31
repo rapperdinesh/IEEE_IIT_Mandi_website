@@ -636,7 +636,7 @@ section {
 .about .image {
     background: url("../img/about.jpg") center center no-repeat;
     background-size: cover;
-    min-height: 200px;
+    min-height: 300px;
     
 }
 

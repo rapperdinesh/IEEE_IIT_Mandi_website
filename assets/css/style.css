@@ -1063,6 +1063,13 @@ section {
     margin: 0 2px;
 }
 
+@media(max-width:991px) {
+    #temp-div {
+        visibility: hidden;
+        display: none;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Pricing
@@ -1636,7 +1643,7 @@ section {
 
 #footer .footer-top .footer-links ul li {
     padding: 10px 0;
-    width: 60%;
+    width: 70%;
     margin: auto;
     display: flex;
 }
@@ -1699,4 +1706,11 @@ section {
     text-align: center;
     font-size: 13px;
     color: #fff;
+}
+
+@media (max-width: 990px) {
+    #footer .footer-top .footer-links ul li {
+        padding-left: 3em;
+        width: 80%;
+    }
 }

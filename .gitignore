@@ -1,0 +1,9 @@
+.cache/*
+.viminfo*
+.mozilla/*
+.node_repl_history
+.local/*
+.DS_Store
+.gitconfig
+.Xauthority
+.bash_history

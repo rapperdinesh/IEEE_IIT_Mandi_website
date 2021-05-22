@@ -10,6 +10,11 @@
 # General
 --------------------------------------------------------------*/
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -100,6 +105,12 @@ h6 {
 #header .logo img {
     max-height: 40px;
 }
+
+
+/* .gmap_canvas iframe {
+    width: 100vw;
+    height: 500;
+} */
 
 
 /*--------------------------------------------------------------

@@ -669,9 +669,82 @@ section {
         max-width: 100%;
     }
 }
+ /* -----------------------------------------------------
+ #Upcoming events
+ --------------------------------------------------------- */
+.light {
+	background: #f3f5f7;
+}
+
+/* card */
+.postcard {
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    position: relative;
+}
+a {
+color: inherit;
+}
+
+.postcard__title {
+font-size: 1.75rem;
+}
+
+.postcard__img {
+max-height: 180px;
+width: 100%;
+object-fit: cover;
+}
+.postcard__img_link {
+display: contents;
+}
+
+.postcard__bar {
+width: 50px;
+height: 10px;
+margin: 10px 0;
+border-radius: 5px;
+background-color: #525050;
+transition: width 0.2s ease;
+}
+.postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .postcard {
+      flex-wrap: inherit;}
+      .postcard__title {
+        font-size: 2rem;
+      }
+      .postcard__img {
+        max-width: 300px;
+        max-height: 100%;
+        transition: transform 0.3s ease;
+      }
+      
+}  
+/* -----------------------------
+upcoming event : close
+---------------------------------- */
 
 
-/*--------------------------------------------------------------
+/*------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
 

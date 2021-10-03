@@ -36,6 +36,245 @@
         p {
             color: black;
         }
+        @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+$main-green: #79dd09 !default;
+$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+$main-yellow: #bdbb49 !default;
+$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+$main-red: #bd150b !default;
+$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+$main-blue: #0076bd !default;
+$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+/* This pen */
+body {
+    font-family: "Baloo 2", cursive;
+    font-size: 16px;
+    color: #ffffff;
+    text-rendering: optimizeLegibility;
+    font-weight: initial;
+}
+
+.dark {
+    background: #91AFC7;
+}
+
+
+.light {
+    background: #f3f5f7;
+}
+
+a, a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: black;
+
+    &.dark {
+        background-color: #18151f;
+    }
+    &.light {
+        background-color: #e1e5ea;
+    }
+
+    .t-dark {
+        color: #18151f;
+    }
+
+  a {
+    color: inherit;
+  }
+
+    h1, .h1 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .small {
+        font-size: 80%;
+    }
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+        padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+        .postcard__text {
+      padding: 2rem 3.5rem;
+    }
+
+        .postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+  .postcard.dark {
+        .postcard__text:before {
+            background: #18151f;
+        }
+  }
+    .postcard.light {
+        .postcard__text:before {
+            background: #e1e5ea;
+        }
+  }
+}
+
     </style>
 
 <head>
@@ -108,60 +347,111 @@
       </header>
 
     <br><br>
-    <div class="jumbotron"><h1 style="color: black; text-align: center;">Career Camp 1.0</h1></div>
-    <div class="container">
-        <div class="container tm-container-2">
-            <div class="row tm-section-mb">
-                <div class="col-lg-12">
+
+<section class="dark">
+    <div class="container py-4">
+        <h1 class="h1 text-center" id="pageHeaderTitle">Career Camp 1.0</h1>
+        <h2 class="h2 text-center" id="pageHeaderTitle">Day 1</h1>
 
 
-                	<div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/workshop.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark-light tm-timeline-description">
-                                            <h3 class="tm-text-orange tm-font-400" text-align="center"><b>List of Speakers</b></h3>
-                                                    <p style="color:black">
-                                                    <!-- Women’s Day serves to be one of the most important events celebrated worldwide. We didn’t want to miss the chance to celebrate the wonderful day. Thus, WiE Affinity Group of IEEE SB Chapter IIT Mandi in collaboration with Women’s cell IIT Mandi celebrated International Women’s day on 8 March, 2021. Due to the current pandemic it was held in hybrid mode (both in-person and online). The celebration saw various programs which included various cultural performances by females residing in the campus. It also had an amazing talk by a former college student and the Rani Gonsalves award recipient, Neha Muthiyan who gave an amazing talk encouraging all the females of the institute to do better and aim big.
-                                                    The event also saw 2 Wie, IEEE speakers; one third year undergraduate at the college, Miss Nishita Sharma and another college student studying in final year, Miss Manvi Gupta. Both had enriching talks which emphasized on the fact that nothing is impossible and sited examples from their own life where they discussed situations that they thought were hard to overcome but time gave them all courage to come back with a better energy and enthusiasm. 
-                                                    The event witnessed a lightning talk by the chief guest Dr Sharmila Mande, distinguished Chief Scientist, TCS Research.
-                                                    
-                                                    The event was a great success and was highly appreciated.
-                                                    <br>
-                                                    <br>
-                                                    </p>
-
-                                                    <h3 class="tm-text-orange tm-font-400"><b>Event 2:</b> </h3>
-                                                    <p style="color:black">
-                                                    As a part of Women’s day celebration WiE Affinity Group of IEEE SB Chapter IIT Mandi organised a Talent Showcase competition during the second week of March, 2021 (8-11 March, 2021). It was an event held so as to recognise and appreciate the hidden talents of females in our institute and was open to all females of the institute. It expected each participant to submit a 2-minute recorded video in which they would be performing their talent. The event saw a huge number of participants and made it really competitive for the judge to decide the winners. The entries included various talented videos showing the cultural, calligraphy, photography and many other skills of the talented females. Top 3 were selected and awarded along with 2 special mentions.
-                                                    </p>
-                                                    <br>
-                                                    <br> <h3 class="tm-text-orange tm-font-400"><b>Event 3:</b> </h3>
-                                                    <p style="color:black">
-                                                    As a part of Women’s day celebration WiE Affinity Group of IEEE SB Chapter IIT Mandi in collaboration with Designauts Club, IIT Mandi organised a Poster designing competition during the second week of March, 2021 (8-13 March, 2021). It was an event held so as to recognise and appreciate the poster designing skills of students in our institute and was open to all students of the institute. It expected all the participants to submit a softcopy of their final posters that they designed on the topic ‘Indian Women in STEM’. The event saw a huge number of participants and made it really competitive for the judge to decide the winners. The results were decided by the Designauts Club and included Winner up, Runner up and Special mention.
-                                                    </p> -->
-                                                    
-                                          
-                                          </div>
-                                      </div>
-                                  </div>
-                                 
-    
-                              </div>
-
-
-                        </div>
-
-                    </div>
+        <article class="postcard dark blue" >
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="./img/speaker1.png" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title blue"><a href="#">5 - PM IST</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
                 </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard__tagbox">
+                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                    <li class="tag__item play blue">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <hr>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/templatemo-script.js"></script>
+        </article>
+        <article class="postcard dark red">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="./img/speaker2.png" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard__tagbox">
+                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                    <li class="tag__item play red">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="light">
+    <div class="container py-2">
+        <div class="h2 text-center text-dark" id="pageHeaderTitle">Day 2</div>
+
+        <article class="postcard light blue">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="./img/speaker3.png" alt="Image Title" />
+            </a>
+            <div class="postcard__text t-dark">
+                <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard__tagbox">
+                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                    <li class="tag__item play blue">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="postcard light red">
+            <a class="postcard__img_link" href="#">
+                <img class="postcard__img" src="./img/speaker4.png" alt="Image Title" />
+            </a>
+            <div class="postcard__text t-dark">
+                <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                <div class="postcard__subtitle small">
+                    <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                    </time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard__tagbox">
+                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                    <li class="tag__item play red">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</section>
 
     </body>
     </html>

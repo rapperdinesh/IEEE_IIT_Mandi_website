@@ -1,298 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <style>
-        header {
-            background-color: #404040;
-            padding: 20px;
-            text-align: center;
-            font-size: 35px;
-            color: white;
-        }
-    
-        .navbar {
-            font-family: montserrat;
-            border-radius: 0;
-            opacity: 1;
-            background-color: black !important;
-        }
-    
-        .navbar li a {
-            color: #d5d5d5 !important;
-            font-size: 17px;
-            padding: 18px !important;
-            transition: .3s;
-        }
-    
-        .navbar-nav li a:hover {
-            color: white !important;
-        }
-    
-        .navbar-nav li.active a {
-            color: #fff !important;
-            background-color: #29292c !important;
-        }
-    
-        p {
-            color: black;
-        }
-        @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
-$main-green: #79dd09 !default;
-$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
-$main-yellow: #bdbb49 !default;
-$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
-$main-red: #bd150b !default;
-$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
-$main-blue: #0076bd !default;
-$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
-
-/* This pen */
-body {
-    font-family: "Baloo 2", cursive;
-    font-size: 16px;
-    color: #ffffff;
-    text-rendering: optimizeLegibility;
-    font-weight: initial;
-}
-
-.dark {
-    background: #91AFC7;
-}
-
-
-.light {
-    background: #f3f5f7;
-}
-
-a, a:hover {
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-#pageHeaderTitle {
-    margin: 2rem 0;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-/* Cards */
-.postcard {
-  flex-wrap: wrap;
-  display: flex;
-
-  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-  border-radius: 10px;
-  margin: 0 0 2rem 0;
-  overflow: hidden;
-  position: relative;
-  color: black;
-
-    &.dark {
-        background-color: #18151f;
+<style>
+    .CC {
+        background-color: #91AFC7;
     }
-    &.light {
-        background-color: #e1e5ea;
+    
+    header {
+        background-color: #404040;
+        padding: 20px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
     }
-
-    .t-dark {
-        color: #18151f;
+    
+    .navbar {
+        font-family: montserrat;
+        border-radius: 0;
+        opacity: 1;
+        background-color: black !important;
     }
-
-  a {
-    color: inherit;
-  }
-
-    h1, .h1 {
-        margin-bottom: 0.5rem;
+    
+    .navbar li a {
+        color: #d5d5d5 !important;
+        font-size: 17px;
+        padding: 18px !important;
+        transition: .3s;
+    }
+    
+    .navbar-nav li a:hover {
+        color: white !important;
+    }
+    
+    .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: #29292c !important;
+    }
+    
+    p {
+        color: black;
+    }
+    /*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+    
+    .about h3 {
+        font-weight: 700;
+        font-size: 34px;
+        color: #4e4039;
+    }
+    
+    .about h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 5px;
+        color: #7a6960;
+    }
+    
+    .about i {
+        font-size: 48px;
+        margin-top: 15px;
+        color: #534c49;
+    }
+    
+    .about p {
+        font-size: 15px;
+        color: #5a6570;
+    }
+    
+    @media (max-width: 991px) {
+        .about .about-img img {
+            max-width: 70%;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .about .about-img img {
+            max-width: 90%;
+        }
+    }
+    
+    button {
+        background-color: #91AFC7;
+    }
+    /*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+    
+    .team .member {
+        position: relative;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 5px;
+        background: #fff;
+        transition: 0.5s;
+    }
+    
+    .team .member .pic {
+        overflow: hidden;
+        width: 180px;
+        /* border-radius: 50%; */
+    }
+    
+    .team .member .pic img {
+        transition: ease-in-out 0.3s;
+    }
+    
+    .team .member:hover {
+        transform: translateY(-10px);
+    }
+    
+    .team .member .member-info {
+        padding-left: 30px;
+    }
+    
+    .team .member h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #37517e;
+    }
+    
+    .team .member span {
+        display: block;
+        font-size: 15px;
+        padding-bottom: 10px;
+        position: relative;
         font-weight: 500;
-        line-height: 1.2;
     }
-
-    .small {
-        font-size: 80%;
+    
+    .team .member span::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 1px;
+        background: #cbd6e9;
+        bottom: 0;
+        left: 0;
     }
-
-  .postcard__title {
-    font-size: 1.75rem;
-  }
-
-  .postcard__img {
-    max-height: 180px;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-  }
-
-  .postcard__img_link {
-    display: contents;
-  }
-
-  .postcard__bar {
-    width: 50px;
-    height: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #424242;
-    transition: width 0.2s ease;
-  }
-
-  .postcard__text {
-    padding: 1.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .postcard__preview-txt {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-    height: 100%;
-  }
-
-  .postcard__tagbox {
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 14px;
-    margin: 20px 0 0 0;
-        padding: 0;
-    justify-content: center;
-
-    .tag__item {
-      display: inline-block;
-      background: rgba(83, 83, 83, 0.4);
-      border-radius: 3px;
-      padding: 2.5px 10px;
-      margin: 0 5px 5px 0;
-      cursor: default;
-      user-select: none;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background: rgba(83, 83, 83, 0.8);
-      }
+    
+    .team .member p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
     }
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
-    opacity: 1;
-    border-radius: 10px;
-  }
-
-  &:hover .postcard__bar {
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .postcard {
-    flex-wrap: inherit;
-
-    .postcard__title {
-      font-size: 2rem;
+    
+    .team .member .social {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
-
-    .postcard__tagbox {
-      justify-content: start;
+    
+    .team .member .social a {
+        transition: ease-in-out 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 32px;
+        height: 32px;
+        background: #eff2f8;
     }
-
-    .postcard__img {
-      max-width: 300px;
-      max-height: 100%;
-      transition: transform 0.3s ease;
+    
+    .team .member .social a i {
+        color: #37517e;
+        font-size: 16px;
+        margin: 0 2px;
     }
-
-    .postcard__text {
-      padding: 3rem;
-      width: 100%;
+    
+    .team .member .social a:hover {
+        background: #47b2e4;
     }
-
-    .media.postcard__text:before {
-      content: "";
-      position: absolute;
-      display: block;
-      background: #18151f;
-      top: -20%;
-      height: 130%;
-      width: 55px;
+    
+    .team .member .social a:hover i {
+        color: #fff;
     }
-
-    &:hover .postcard__img {
-      transform: scale(1.1);
+    
+    .team .member .social a+a {
+        margin-left: 8px;
     }
-
-    &:nth-child(2n+1) {
-      flex-direction: row;
-    }
-
-    &:nth-child(2n+0) {
-      flex-direction: row-reverse;
-    }
-
-    &:nth-child(2n+1) .postcard__text::before {
-      left: -12px !important;
-      transform: rotate(4deg);
-    }
-
-    &:nth-child(2n+0) .postcard__text::before {
-      right: -12px !important;
-      transform: rotate(-4deg);
-    }
-  }
-}
-@media screen and (min-width: 1024px){
-        .postcard__text {
-      padding: 2rem 3.5rem;
-    }
-
-        .postcard__text:before {
-      content: "";
-      position: absolute;
-      display: block;
-
-      top: -20%;
-      height: 130%;
-      width: 55px;
-    }
-
-  .postcard.dark {
-        .postcard__text:before {
-            background: #18151f;
-        }
-  }
-    .postcard.light {
-        .postcard__text:before {
-            background: #e1e5ea;
-        }
-  }
-}
-
-    </style>
+</style>
 
 <head>
     <title>CAREER CAMP 1.0 | IEEE IIT Mandi</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+
     <title>IEEE IIT Mandi</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-  
+
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
+
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -300,7 +205,7 @@ a, a:hover {
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -314,144 +219,153 @@ a, a:hover {
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
 
 </head>
-    <body style = "background-color: white">
 
-       <!-- NAVBAR STARTS-->
-       <header id="header" class="fixed-top">
+<body style="background-color: white">
+
+    <!-- NAVBAR STARTS-->
+    <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
-    
-          <h1 class="logo me-auto"><a href="index.html">IEEE-IIT Mandi</a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-    
-          <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="upcomingEvents.html">Upcoming Events</a></li>
-                  <li><a href="events2021.html">Events 2021</a></li>      
-                  <li><a href="events2020.html">Events 2020</a></li>              
-                  <li><a href="events2019.html">Events 2019</a></li>
-                  <li><a href="events2018.html">Events 2018</a></li>
-                  <li><a href="events2017.html">Events 2017</a></li>
-                  <li><a href="events2016.html">Events 2016</a></li>
-                  <li><a href="Career Camp 1.0.html">Career Camp 1.0</a></li>
-     
+
+            <h1 class="logo me-auto"><a href="index.html">IEEE-IIT Mandi</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="upcomingEvents.html" style="text-decoration:None;">Upcoming Events</a></li>
+                    <li><a href="events2021.html" style="text-decoration:None;">Events 2021</a></li>
+                    <li><a href="events2020.html" style="text-decoration:None;">Events 2020</a></li>
+                    <li><a href="events2019.html" style="text-decoration:None;">Events 2019</a></li>
+                    <li><a href="events2018.html" style="text-decoration:None;">Events 2018</a></li>
+                    <li><a href="events2017.html" style="text-decoration:None;">Events 2017</a></li>
+                    <li><a href="events2016.html" style="text-decoration:None;">Events 2016</a></li>
+                    <li><a href="Career Camp 1.0.html" style="text-decoration:None;">Career Camp 1.0</a></li>
+
                 </ul>
-              </li>
-              
-    
-            </ul>
-          </nav><!-- .nav-menu -->
-    
+                </li>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
         </div>
-      </header>
+    </header>
 
     <br><br>
 
-<section class="dark">
-    <div class="container py-4">
-        <h1 class="h1 text-center" id="pageHeaderTitle">Career Camp 1.0</h1>
-        <h2 class="h2 text-center" id="pageHeaderTitle">Day 1</h1>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
 
-
-        <article class="postcard dark blue" >
-            <a class="postcard__img_link" href="#">
-                <img class="postcard__img" src="./img/speaker1.png" alt="Image Title" />
-            </a>
-            <div class="postcard__text">
-                <h1 class="postcard__title blue"><a href="#">5 - PM IST</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time>
+            <div class="row ">
+                <div class="col-lg-6 ">
+                    <br><br>
+                    <img src="img/IEEEP2.svg" class="img-fluid" alt="" data-aos="zoom-in">
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play blue">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <article class="postcard dark red">
-            <a class="postcard__img_link" href="#">
-                <img class="postcard__img" src="./img/speaker2.png" alt="Image Title" />
-            </a>
-            <div class="postcard__text">
-                <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time>
+                <div class="col-lg-6 pt-5 pt-lg-0">
+                    <br><br>
+                    <h3 data-aos="fade-up">About Event</h3>
+                    <p data-aos="fade-up" data-aos-delay="100">
+
+                        This event is organised by IEEE IIT Mandi in order to let the new generation of engineers become aware of the opportunities that IEEE provides. The event is part of the annual IEEE Day celebration and would act as the foundation for the students to build
+                        their careers upon.
+                        <br>
+                    </p>
+                    <div class="button"><button type="submit" href=" ">Register Now</button></div>
+
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play red">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul>
             </div>
-        </article>
 
-    </div>
-</section>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
 
-<section class="light">
-    <div class="container py-2">
-        <div class="h2 text-center text-dark" id="pageHeaderTitle">Day 2</div>
+            <div class="section-title">
+                <h2>Team</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                    quidem hic quas.</p>
+            </div>
 
-        <article class="postcard light blue">
-            <a class="postcard__img_link" href="#">
-                <img class="postcard__img" src="./img/speaker3.png" alt="Image Title" />
-            </a>
-            <div class="postcard__text t-dark">
-                <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time>
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="pic"><img src="img/speaker1.png" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play blue">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <article class="postcard light red">
-            <a class="postcard__img_link" href="#">
-                <img class="postcard__img" src="./img/speaker4.png" alt="Image Title" />
-            </a>
-            <div class="postcard__text t-dark">
-                <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
-                <div class="postcard__subtitle small">
-                    <time datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play red">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-    </div>
-</section>
 
-    </body>
-    </html>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="pic"><img src="img/speaker2.png" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Sarah Jhonson</h4>
+                            <span>Product Manager</span>
+                            <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="pic"><img src="img/speaker3.png" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>William Anderson</h4>
+                            <span>CTO</span>
+                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="img/speaker4.png" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Amanda Jepson</h4>
+                            <span>Accountant</span>
+                            <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                            <div class="social">
+                                <a href=""><i class="ri-twitter-fill"></i></a>
+                                <a href=""><i class="ri-facebook-fill"></i></a>
+                                <a href=""><i class="ri-instagram-fill"></i></a>
+                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Team Section -->
+
+
+
+</body>
+
+</html>
